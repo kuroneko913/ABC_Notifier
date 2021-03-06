@@ -14,12 +14,12 @@ function AtCoderNotify(contestTitle) {
   let threads = GmailApp.search('from:noreply@atcoder.jp subject:'+contestTitle+" is:unread",0,1)
   if (threads.length === 0) return
   mail = new AtCoderMail(threads[0])
-  notifier = new NotifyCalendar(mail, contestTitle)
+  notifier = new AtCoderNotifyCalendar(mail, contestTitle)
   notifier.exec()
   threads[0].markRead()
 }
 
-NotifyCalendar = class {
+AtCoderNotifyCalendar = class {
 
   constructor(mail, pattern) {
     this.mail = mail
