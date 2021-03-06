@@ -46,7 +46,6 @@ NotifyCalendar = class {
     event.addPopupReminder(60)
     event.addPopupReminder(5)
     Logger.log('Event ID: ' + event.getId())
-    this.mail.thread.markRead()
   }
   exec() {
     let date = new Date(Date.now())
