@@ -1,0 +1,2 @@
+# ABC_Notifier
+AtCoder Beginner Contest の告知メールを受信した時にGoogleCalendarに予定を登録する
